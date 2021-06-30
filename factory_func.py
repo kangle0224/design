@@ -15,7 +15,9 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Payment(metaclass=ABCMeta):
+class Payment():
+    __metaclass__ = ABCMeta
+
     @abstractmethod
     def pay(self, money):
         pass
@@ -51,5 +53,7 @@ class PaymentFactory:
 
 # client
 l = PaymentFactory()
-p = l.create_payment("alipay")
-p.pay(100)
+p1 = l.create_payment("alipay")
+p1.pay(100)
+p2 = l.create_payment("huabei")
+p2.pay(20)
