@@ -6,6 +6,7 @@ from external import Synthesizer, Human
 """
 适配器应该满族开放/封闭原则
 适配器可以由子类来实现，但是适配器技术是一种很好的方案
+可参考grok和traits来熟悉适配器模式
 """
 
 class Computer:
